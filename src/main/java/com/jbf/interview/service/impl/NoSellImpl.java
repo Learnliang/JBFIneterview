@@ -22,13 +22,13 @@ public class NoSellImpl implements IJBFStrategy {
         for (Goods goods : goodsList) {
             sb.append("编号:").append(goods.getNo()).append(",原价:").append(goods.getPrice());
             double price = goods.getPrice();
-            sb.append(",重量").append(goods.getCount()).append(" 斤");
+            sb.append(",重量:").append(goods.getCount()).append(" 斤");
             sb.append(",实际单价:").append(df.format(price));
             double money = goods.getCount() * price;
-            sb.append(",该件商品总价:").append(df.format(money)).append(" \t\n");
+            sb.append(",总价:").append(df.format(money)).append(" \t\n");
             totalMoney += money;
         }
-        sb.append(",原价：").append(totalMoney).append("\t\n实付:").append(df.format(totalMoney));
+        sb.append("原价：").append(totalMoney).append("\t\n实付:").append(df.format(totalMoney));
         return sb.toString();
     }
 

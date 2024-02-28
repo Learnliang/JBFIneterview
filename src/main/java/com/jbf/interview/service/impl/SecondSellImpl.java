@@ -35,7 +35,7 @@ public class SecondSellImpl implements IJBFStrategy {
             sb.append(",实际单价:").append(df.format(price));
             double money = count * price;
             sb.append(",重量").append(count).append(" 斤");
-            sb.append(",该件商品总价:").append(df.format(money)).append(" \t\n");
+            sb.append(",总价:").append(df.format(money)).append(" \t\n");
             totalMoney += money;
         }
         // 购物满 100 减 10 块。

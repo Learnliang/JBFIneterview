@@ -35,7 +35,7 @@ public class FirstSellImpl implements IJBFStrategy {
             sb.append(",实际单价:").append(df.format(price));
             double money = count * price;
             sb.append(",重量:").append(count).append(" 斤");
-            sb.append(",该件商品总价:").append(df.format(money)).append(" \t\n");
+            sb.append(",总价:").append(df.format(money)).append(" \t\n");
             totalMoney += money;
         }
         sb.append("原价:").append(oldTotal).append("\t\n实付:").append(df.format(totalMoney));
